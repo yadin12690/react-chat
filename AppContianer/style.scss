@@ -1,0 +1,58 @@
+$controlsHeight: 15vh;
+$screenHeight: 100vh;
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  position: fixed;
+  bottom: 0;
+  height: $controlsHeight;
+  width: 93%;
+
+  input,
+  button {
+    height: 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px 1px rgba(36, 91, 140, 0.15);
+    border: none;
+  }
+
+  input {
+    border-radius: 9999px;
+    background: white;
+    flex-grow: 1;
+    margin-right: 15px;
+  }
+
+  button {
+    background: #3794ff;
+    border-radius: 3px;
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  ::placeholder {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: Helvetica;
+    color: #e6e6e6;
+  }
+}
+
+.typingElement {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.chat-con {
+  overflow: auto;
+  max-height: calc(#{$screenHeight} - #{$controlsHeight});
+}
